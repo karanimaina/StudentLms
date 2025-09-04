@@ -1,0 +1,46 @@
+body {
+  font-family: 'Inter', sans-serif;
+}
+.card-shadow {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.sidebar {
+  width: 280px;
+  transition: all 0.3s ease;
+}
+.main-content {
+  transition: all 0.3s ease;
+}
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    position: fixed;
+    z-index: 50;
+    height: 100vh;
+  }
+  .sidebar.active {
+    transform: translateX(0);
+  }
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 40;
+  }
+  .overlay.active {
+    display: block;
+  }
+}
+.course-progress {
+  height: 8px;
+}
+.notification-dot {
+  width: 8px;
+  height: 8px;
+  top: -2px;
+  right: -2px;
+}
