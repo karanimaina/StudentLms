@@ -1,0 +1,132 @@
+
+<div class="w-full max-w-md">
+  <!-- Registration Card -->
+  <div class="bg-white rounded-xl card-shadow overflow-hidden">
+    <!-- Header Section -->
+    <div class="bg-gradient-to-r from-primary to-indigo-700 py-6 px-6 text-center">
+      <h1 class="text-2xl font-bold text-white">Create Your Account</h1>
+      <p class="text-indigo-100 mt-2">Join our Learning Management System</p>
+    </div>
+
+    <!-- Registration Form -->
+    <div class="px-8 py-6">
+      <!-- User Type Selection -->
+      <div class="flex justify-between mb-6 bg-gray-100 p-1 rounded-lg">
+        <button class="flex-1 py-2 px-4 rounded-md font-medium transition-all duration-300 user-type selected bg-white text-primary shadow-sm">
+          <i class="fas fa-user-graduate mr-2"></i> Student
+        </button>
+        <button class="flex-1 py-2 px-4 rounded-md font-medium transition-all duration-300 user-type text-gray-500">
+          <i class="fas fa-chalkboard-teacher mr-2"></i> Lecturer
+        </button>
+      </div>
+
+      <!-- Google Sign Up -->
+      <div id="google-signup">
+        <button class="w-full flex items-center justify-center gap-2 py-2.5 px-4 border border-gray-300 rounded-lg text-gray-700 font-medium hover:bg-gray-50 transition-colors duration-300 mb-6">
+          <img src="/assets/google.png" alt="Google" class="w-5 h-5">
+          Sign up with Google
+        </button>
+
+        <!-- Divider -->
+        <div class="relative flex items-center mb-6">
+          <div class="flex-grow border-t border-gray-300"></div>
+          <span class="flex-shrink mx-4 text-gray-500 text-sm">Or</span>
+          <div class="flex-grow border-t border-gray-300"></div>
+        </div>
+
+        <!-- Continue with email button -->
+        <button id="email-toggle" class="w-full bg-gray-100 text-gray-700 py-2.5 px-4 rounded-lg font-medium hover:bg-gray-200 transition-colors duration-300 mb-6">
+          Continue with email
+        </button>
+      </div>
+
+      <!-- Email Form (initially hidden) -->
+      <div id="email-form" class="hidden slide-down">
+        <form>
+          <div class="grid grid-cols-2 gap-4 mb-4">
+            <div>
+              <label for="firstName" class="block text-gray-700 text-sm font-medium mb-2">First Name</label>
+              <div class="relative">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <i class="fas fa-user text-gray-400"></i>
+                </div>
+                <input id="firstName" type="text" class="w-full pl-10 pr-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="John">
+              </div>
+            </div>
+            <div>
+              <label for="lastName" class="block text-gray-700 text-sm font-medium mb-2">Last Name</label>
+              <div class="relative">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <i class="fas fa-user text-gray-400"></i>
+                </div>
+                <input id="lastName" type="text" class="w-full pl-10 pr-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Doe">
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <label for="email" class="block text-gray-700 text-sm font-medium mb-2">Email Address</label>
+            <div class="relative">
+              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <i class="fas fa-envelope text-gray-400"></i>
+              </div>
+              <input id="email" type="email" class="w-full pl-10 pr-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="you@example.com">
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <label for="password" class="block text-gray-700 text-sm font-medium mb-2">Password</label>
+            <div class="relative">
+              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <i class="fas fa-lock text-gray-400"></i>
+              </div>
+              <input id="password" type="password" class="w-full pl-10 pr-10 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="••••••••">
+              <button type="button" id="togglePassword" class="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+            <p class="text-xs text-gray-500 mt-1">Must be at least 8 characters</p>
+          </div>
+
+          <div class="mb-6">
+            <label for="confirmPassword" class="block text-gray-700 text-sm font-medium mb-2">Confirm Password</label>
+            <div class="relative">
+              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <i class="fas fa-lock text-gray-400"></i>
+              </div>
+              <input id="confirmPassword" type="password" class="w-full pl-10 pr-10 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="••••••••">
+              <button type="button" id="toggleConfirmPassword" class="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="mb-4 flex items-center">
+            <input id="terms" type="checkbox" class="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded">
+            <label for="terms" class="ml-2 block text-sm text-gray-700">
+              I agree to the <a href="#" class="text-primary font-medium hover:underline">Terms</a> and <a href="#" class="text-primary font-medium hover:underline">Privacy Policy</a>
+            </label>
+          </div>
+
+          <button type="submit" class="w-full bg-primary text-white py-2.5 px-4 rounded-lg font-medium hover:bg-indigo-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary mb-4">
+            Create Account
+          </button>
+
+          <button type="button" id="back-to-google" class="w-full text-gray-600 py-2.5 px-4 rounded-lg font-medium hover:text-gray-800 transition-colors duration-300 flex items-center justify-center">
+            <i class="fas fa-arrow-left mr-2"></i> Back to Google sign up
+          </button>
+        </form>
+      </div>
+
+      <!-- Sign In Link -->
+      <div class="mt-6 text-center">
+        <p class="text-gray-600 text-sm">Already have an account? <a routerLink="/signIn" class="text-primary font-medium hover:underline">Sign in</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Demo Notice -->
+  <div class="max-w-md mx-auto mt-6 text-center text-gray-500 text-sm">
+    <p>Demo registration for students and lecturers. Click on user type to switch.</p>
+  </div>
+</div>
