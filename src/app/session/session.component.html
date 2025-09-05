@@ -1,0 +1,392 @@
+
+<!-- Header -->
+<header class="bg-white card-shadow sticky top-0 z-30">
+  <div class="flex items-center justify-between p-4">
+    <div class="flex items-center space-x-4">
+      <button onclick="goBack()" class="text-gray-500 hover:text-gray-700">
+        <i class="fas fa-arrow-left text-xl"></i>
+      </button>
+      <h1 class="text-xl font-semibold">Session 9: Tree Removal Operations</h1>
+    </div>
+
+    <div class="flex items-center space-x-4">
+      <div class="text-sm text-gray-500">
+        <span>60% Complete</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Session Content -->
+<main class="p-4 md:p-6 max-w-4xl mx-auto">
+  <!-- Session Info -->
+  <div class="bg-white rounded-xl p-5 card-shadow mb-6">
+    <div class="flex flex-wrap justify-between items-center mb-4">
+      <div>
+        <h2 class="text-xl font-semibold">Tree Removal Operations</h2>
+        <p class="text-gray-500">April 11, 2025 • 40 minutes • Advanced</p>
+      </div>
+      <div class="flex items-center mt-2 md:mt-0">
+        <div class="w-32 bg-gray-200 rounded-full h-2 mr-3">
+          <div class="bg-blue-600 h-2 rounded-full" style="width: 60%"></div>
+        </div>
+        <span class="text-sm font-medium">60%</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Learning Objectives -->
+  <div class="bg-white rounded-xl p-5 card-shadow mb-6">
+    <h2 class="text-xl font-semibold mb-4">Learning Objectives</h2>
+    <ul class="space-y-3">
+      <li class="flex items-start">
+        <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+        <span>Understand the key concepts presented in this session</span>
+      </li>
+      <li class="flex items-start">
+        <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+        <span>Analyze the material in section 1</span>
+      </li>
+      <li class="flex items-start">
+        <i class="fas fa-circle text-gray-300 mt-1 mr-2"></i>
+        <span>Apply the learned concepts to practical scenarios</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Session Media (Swipeable) -->
+  <div class="bg-white rounded-xl p-5 card-shadow mb-6">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-xl font-semibold">Session Media</h2>
+      <span class="text-sm text-gray-500"><span id="current-slide">1</span>/5</span>
+    </div>
+
+    <div class="relative">
+      <div class="media-container flex overflow-x-auto snap-x snap-mandatory hide-scrollbar rounded-lg mb-4" style="height: 400px;">
+        <!-- Media 1 -->
+        <div class="media-slide w-full flex-shrink-0 flex items-center justify-center bg-gray-800 rounded-lg">
+          <div class="text-center text-white p-4">
+            <i class="fas fa-image text-5xl mb-4 text-blue-400"></i>
+            <h3 class="text-xl font-semibold mb-2">Tree Structure Visualization</h3>
+            <p class="text-gray-300">Visual representation of tree data structure</p>
+          </div>
+        </div>
+
+        <!-- Media 2 -->
+        <div class="media-slide w-full flex-shrink-0 flex items-center justify-center bg-gray-800 rounded-lg">
+          <div class="text-center text-white p-4">
+            <i class="fas fa-code text-5xl mb-4 text-green-400"></i>
+            <h3 class="text-xl font-semibold mb-2">Removal Algorithm</h3>
+            <p class="text-gray-300">Code implementation for node removal</p>
+          </div>
+        </div>
+
+        <!-- Media 3 -->
+        <div class="media-slide w-full flex-shrink-0 flex items-center justify-center bg-gray-800 rounded-lg">
+          <div class="text-center text-white p-4">
+            <i class="fas fa-sitemap text-5xl mb-4 text-yellow-400"></i>
+            <h3 class="text-xl font-semibold mb-2">Tree Traversal</h3>
+            <p class="text-gray-300">Different approaches to traverse tree structures</p>
+          </div>
+        </div>
+
+        <!-- Media 4 -->
+        <div class="media-slide w-full flex-shrink-0 flex items-center justify-center bg-gray-800 rounded-lg">
+          <div class="text-center text-white p-4">
+            <i class="fas fa-project-diagram text-5xl mb-4 text-purple-400"></i>
+            <h3 class="text-xl font-semibold mb-2">Complex Structures</h3>
+            <p class="text-gray-300">Handling complex tree structures</p>
+          </div>
+        </div>
+
+        <!-- Media 5 -->
+        <div class="media-slide w-full flex-shrink-0 flex items-center justify-center bg-gray-800 rounded-lg">
+          <div class="text-center text-white p-4">
+            <i class="fas fa-check-circle text-5xl mb-4 text-red-400"></i>
+            <h3 class="text-xl font-semibold mb-2">Summary</h3>
+            <p class="text-gray-300">Key takeaways from this session</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Dots -->
+      <div class="flex justify-center space-x-2 mb-4">
+        <div class="progress-dot active w-3 h-3 bg-blue-300 rounded-full"></div>
+        <div class="progress-dot w-3 h-3 bg-gray-300 rounded-full"></div>
+        <div class="progress-dot w-3 h-3 bg-gray-300 rounded-full"></div>
+        <div class="progress-dot w-3 h-3 bg-gray-300 rounded-full"></div>
+        <div class="progress-dot w-3 h-3 bg-gray-300 rounded-full"></div>
+      </div>
+
+      <!-- Navigation Arrows -->
+      <button id="prev-btn" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md opacity-70 hover:opacity-100">
+        <i class="fas fa-chevron-left text-gray-700"></i>
+      </button>
+      <button id="next-btn" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md opacity-70 hover:opacity-100">
+        <i class="fas fa-chevron-right text-gray-700"></i>
+      </button>
+
+      <!-- Swipe Hint -->
+      <div class="text-center text-gray-500 text-sm swipe-hint">
+        <i class="fas fa-arrows-left-right mr-2"></i>Swipe to navigate
+      </div>
+    </div>
+  </div>
+
+  <!-- Session Content -->
+  <div class="bg-white rounded-xl p-5 card-shadow mb-6">
+    <h2 class="text-xl font-semibold mb-4">Session Content</h2>
+    <div class="session-content">
+      <div class="prose max-w-none">
+        <h3>Tree Removal Operations</h3>
+        <p>This session covers advanced techniques for removing nodes from tree data structures while maintaining structural integrity and performance characteristics.</p>
+
+        <h4>Key Concepts</h4>
+        <ul>
+          <li>Node removal in binary search trees</li>
+          <li>Balancing trees after removal operations</li>
+          <li>Handling edge cases in tree manipulation</li>
+          <li>Performance considerations for removal algorithms</li>
+        </ul>
+
+        <h4>Algorithm Overview</h4>
+        <p>The algorithm for tree node removal must consider several cases to ensure the tree remains properly structured:</p>
+
+        <pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto">
+// Pseudocode for tree node removal
+algorithm Remove(value)
+    Pre: value is the value to remove from the tree
+    Post: value is removed and tree is rebalanced
+
+    nodeToRemove ← FindNode(value)
+    if nodeToRemove = null
+        return false
+    end if
+
+    parent ← FindParent(value)
+
+    // Case 1: Node has no children
+    if nodeToRemove.Left = null and nodeToRemove.Right = null
+        if nodeToRemove.Value < parent.Value
+            parent.Left ← null
+        else
+            parent.Right ← null
+        end if
+
+    // Case 2: Node has one child
+    else if nodeToRemove.Left = null or nodeToRemove.Right = null
+        // Implementation details...
+
+    // Case 3: Node has two children
+    else
+        // Find successor and rearrange tree
+    end if
+
+    return true
+end algorithm
+                    </pre>
+
+        <h4>Practical Applications</h4>
+        <p>Tree removal operations are fundamental to many computer science applications including database systems, file systems, and network routing algorithms.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Session Summary -->
+  <div class="bg-white rounded-xl p-5 card-shadow mb-6">
+    <h2 class="text-xl font-semibold mb-4">Session Summary</h2>
+    <div class="bg-blue-50 p-4 rounded-lg">
+      <p class="text-gray-700">
+        This session covered tree removal operations, focusing on the algorithm for removing nodes from tree data structures.
+        The algorithm handles three cases: removal of a leaf node, removal of a node with one child, and removal of a node with two children.
+        The session emphasized the importance of maintaining tree balance and performance characteristics during removal operations.
+      </p>
+    </div>
+
+    <!-- Key Terms -->
+    <div class="mt-4">
+      <h3 class="font-semibold mb-2">Key Terms</h3>
+      <div class="flex flex-wrap gap-2">
+        <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-1 rounded">sorting</span>
+        <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-1 rounded">algorithm</span>
+        <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-1 rounded">right</span>
+        <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-1 rounded">pivot</span>
+        <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-1 rounded">number</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- End Session Button -->
+  <div class="text-center mt-8">
+    <button onclick="endSession()" class="bg-primary text-white font-medium py-3 px-8 rounded-lg hover:bg-indigo-700 transition-colors">
+      <i class="fas fa-check-circle mr-2"></i>End Session
+    </button>
+  </div>
+</main>
+
+<script>
+  // Sample session data
+  const sessionData = {
+    id: 1073843497949800,
+    sessionNumber: 9,
+    title: "Session 9: Tree Removal Operations",
+    description: null,
+    sessionDate: "2025-04-11",
+    estimatedDurationMinutes: 40,
+    difficulty: "ADVANCED",
+    wordCount: 2216,
+    summary: "6) parent.Right ← nodeToRemove.Right\n37) end if\n38) else if nodeToRemove.Left 6= ∅ and nodeToRemove.Right = ∅\n39) // case #3\n40) if nodeToRemove.Value < parent.Value\n41) parent.Left ← nodeToRemove.Left\n42) else\n43) parent.Right ← nodeToRemove.Left\n44) end if\n45) else\n46) // case #4\n47) largestV alue ← nodeToRemove.Left\n48) while largestV alue.Right 6= ∅\n49) // find the largest value in the left subtree of nodeToRemove\n50) largestV alue ← largestV alue.Right\nCHAPTER 7. Given the\nnumber 102 if we look at the first key, the ones then we can see we have two of\nthem, progressing to the next key - tens we can see that the number has zero\nof them, finally we can see that the number has a single hundred. NUMERIC 73\n1) algorithm ToBinary(n)\n2) Pre: n ≥ 0\n3) Post: n has been converted",
+    learningObjectives: [
+      "Understand the key concepts presented in this session",
+      "Analyze the material in section 1",
+      "Apply the learned concepts to practical scenarios"
+    ],
+    keyTerms: [
+      "sorting",
+      "algorithm",
+      "right",
+      "pivot",
+      "number"
+    ],
+    contents: [
+      {
+        title: "Section 1",
+        content: "6) parent.Right ← nodeToRemove.",
+        contentType: "TEXT",
+        order: 1,
+        summary: null,
+        estimatedReadingTimeMinutes: 0,
+        createdAt: null,
+        interactionType: null,
+        interactive: false
+      }
+    ],
+    mediaContents: [
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81
+    ],
+    createdAt: null,
+    prerequisites: null,
+    assessmentQuestions: null,
+    unitStructure: 1,
+    completed: false
+  };
+
+  // Media navigation
+  const mediaContainer = document.querySelector('.media-container');
+  const mediaSlides = document.querySelectorAll('.media-slide');
+  const progressDots = document.querySelectorAll('.progress-dot');
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
+  const currentSlideEl = document.getElementById('current-slide');
+
+  let currentSlide = 0;
+
+  // Update UI based on current slide
+  function updateSlideUI() {
+    // Update dots
+    progressDots.forEach((dot, index) => {
+      if (index === currentSlide) {
+        dot.classList.add('active');
+      } else {
+        dot.classList.remove('active');
+      }
+    });
+
+    // Update current slide indicator
+    currentSlideEl.textContent = currentSlide + 1;
+
+    // Scroll to current slide
+    mediaContainer.scrollTo({
+      left: mediaSlides[currentSlide].offsetLeft,
+      behavior: 'smooth'
+    });
+  }
+
+  // Navigate to next slide
+  function nextSlide() {
+    if (currentSlide < mediaSlides.length - 1) {
+      currentSlide++;
+      updateSlideUI();
+    }
+  }
+
+  // Navigate to previous slide
+  function prevSlide() {
+    if (currentSlide > 0) {
+      currentSlide--;
+      updateSlideUI();
+    }
+  }
+
+  // Event listeners
+  prevBtn.addEventListener('click', prevSlide);
+  nextBtn.addEventListener('click', nextSlide);
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') {
+      prevSlide();
+    } else if (e.key === 'ArrowRight') {
+      nextSlide();
+    }
+  });
+
+  // Swipe handling for touch devices
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  mediaContainer.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, false);
+
+  mediaContainer.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+  }, false);
+
+  function handleSwipe() {
+    const swipeThreshold = 50;
+
+    if (touchEndX < touchStartX - swipeThreshold) {
+      nextSlide(); // Swipe left
+    }
+
+    if (touchEndX > touchStartX + swipeThreshold) {
+      prevSlide(); // Swipe right
+    }
+  }
+
+  // Dot navigation
+  progressDots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      currentSlide = index;
+      updateSlideUI();
+    });
+  });
+
+  // Initialize first slide
+  updateSlideUI();
+
+  // Navigation functions
+  function goBack() {
+    alert('Navigating back to session list...');
+    // In a real app: window.history.back() or router navigation
+  }
+
+  function endSession() {
+    alert('Session completed! Returning to session list...');
+    // In a real app: mark session as complete and navigate back
+  }
+
+  console.log("Session data loaded:", sessionData);
+</script>
+
