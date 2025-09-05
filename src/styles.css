@@ -837,3 +837,17 @@ body {
   50% { transform: translateX(10px); }
   100% { transform: translateX(0); }
 }
+
+@layer components {
+  .session-card {
+    @apply bg-white rounded-xl p-5 shadow mb-6;
+  }
+}
+/* Hide scrollbar */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
