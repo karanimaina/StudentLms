@@ -1,0 +1,70 @@
+<div class="sidebar bg-white card-shadow fixed md:relative z-50">
+  <div class="p-5 border-b border-gray-200">
+    <h1 class="text-xl font-bold text-primary">LMS Portal</h1>
+    <p class="text-sm text-gray-500">Student Dashboard</p>
+  </div>
+
+  <div class="p-4 border-b border-gray-200 flex items-center space-x-4">
+    <div class="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-indigo-700 flex items-center justify-center text-white font-bold">
+      JS
+    </div>
+    <div>
+      <h2 class="font-semibold">John Smith</h2>
+      <p class="text-xs text-gray-500">ADM-2023-0875</p>
+    </div>
+  </div>
+
+  <nav class="p-4">
+    <ul class="space-y-2">
+      <li>
+        <a  routerLink="/student"
+            routerLinkActive="text-primary bg-indigo-100"
+            class="flex items-center space-x-3 text-primary font-medium p-2 rounded-lg bg-indigo-50">
+          <i class="fas fa-home w-5"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/course"
+           routerLinkActive="text-primary bg-indigo-100"
+           class="flex items-center space-x-3 text-gray-600 hover:text-primary p-2 rounded-lg hover:bg-indigo-50">
+          <i class="fas fa-book w-5"></i>
+          <span>My Course</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#" class="flex items-center space-x-3 text-gray-600 hover:text-primary p-2 rounded-lg hover:bg-indigo-50">
+          <i class="fas fa-calendar-alt w-5"></i>
+          <span>Schedule</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="flex items-center space-x-3 text-gray-600 hover:text-primary p-2 rounded-lg hover:bg-indigo-50">
+          <i class="fas fa-tasks w-5"></i>
+          <span>Assignments</span>
+          <span class="ml-auto bg-red-100 text-red-800 text-xs px-2 py-0.5 rounded-full">3</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="flex items-center space-x-3 text-gray-600 hover:text-primary p-2 rounded-lg hover:bg-indigo-50">
+          <i class="fas fa-chart-bar w-5"></i>
+          <span>Grades</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="flex items-center space-x-3 text-gray-600 hover:text-primary p-2 rounded-lg hover:bg-indigo-50">
+          <i class="fas fa-cog w-5"></i>
+          <span>Settings</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="mt-10">
+      <a href="#" class="flex items-center space-x-3 text-gray-600 hover:text-red-600 p-2 rounded-lg hover:bg-red-50">
+        <i class="fas fa-sign-out-alt w-5"></i>
+        <span>Logout</span>
+      </a>
+    </div>
+  </nav>
+</div>
